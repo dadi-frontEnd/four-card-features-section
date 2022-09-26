@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    /* ## Colors ### Primary - */
+    --clr-Red: hsl(0, 78%, 62%);
+    --clr-Cyan: hsl(180, 62%, 55%);
+    --clr-Orange: hsl(34, 97%, 64%);
+    --clr-Blue: hsl(212, 86%, 64%);
+    /*### Neutral - */
+    --clr-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --clr-Grayish-Blue: hsl(229, 6%, 66%);
+    --clr-Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    /*## Typography ### Body -*/
+    Font-size: 15px;
+    /* ### Fonts - Family*/
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: var(--clr-Very-Light-Gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: auto;
+    padding: 30px;
+}
+
+main {
+    margin: 20px auto;
+}
+
+
+header>p:first-of-type {
+    font-size: 29px;
+    line-height: 25px;
+}
+
+header>p:not(:first-of-type) {
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 29px;
+    padding: 10px 0;
+}
+
+
+aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+picture {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: -1px 9px 15px -6px var(--clr-Grayish-Blue);
+    padding: 35px 40px;
+    line-height: 25px;
+}
+
+.card.sup {
+    border-top: 2px solid var(--clr-Cyan);
+}
+
+.card.team {
+    border-top: 2px solid red;
+}
+
+.card.karm {
+    border-top: 2px solid var(--clr-Orange);
+}
+
+.card.calc {
+    border-top: 2px solid var(--clr-Blue);
+}
+
+.card p {
+    font-size: 13px;
+}
+
+h2,
+h3 {
+    color: var(--clr-Very-Dark-Blue);
+}
+
+p {
+    color: var(--clr-Grayish-Blue);
+}
+
+@media (max-width:768px) {
+    main {
+        width: 375px;
+        margin: 20px auto;
+    }
+
+    section {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+}
+
+@media(min-width:769px) {
+    section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    section>article,
+    aside {
+        width: 26%;
+    }
+
+    header>p:not(:first-of-type) {
+        padding: 10px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        text-align: center;
+    }
+}
